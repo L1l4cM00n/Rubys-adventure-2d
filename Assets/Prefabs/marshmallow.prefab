@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7087384507834132733}
   - component: {fileID: 7527825571905357668}
   - component: {fileID: 693874243779775352}
-  m_Layer: 0
+  - component: {fileID: 5025121897586310897}
+  m_Layer: 8
   m_Name: marshmallow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,6 +152,7 @@ MonoBehaviour:
   speed: 3
   maxHealth: 5
   timeInvincible: 2
+  projectilePrefab: {fileID: 5225178581935521318, guid: d709de4a498c97a419b653c00c6980dd, type: 3}
 --- !u!50 &7527825571905357668
 Rigidbody2D:
   serializedVersion: 4
@@ -223,3 +225,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7167706, y: 0.9716477}
   m_EdgeRadius: 0
+--- !u!95 &5025121897586310897
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790923953291876767}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 15c93a869dd14df478b6eebf0c4a9b3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

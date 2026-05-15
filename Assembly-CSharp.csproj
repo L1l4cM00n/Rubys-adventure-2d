@@ -47,7 +47,12 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\HealthCollectible.cs" />
     <Compile Include="Assets\scripts\DamageZone.cs" />
+    <Compile Include="Assets\scripts\EnemyController.cs" />
+    <Compile Include="Assets\scripts\Projectile.cs" />
+    <Compile Include="Assets\scripts\UIHandler.cs" />
     <Compile Include="Assets\scripts\PlayerController.cs" />
+    <Compile Include="Assets\scripts\NonPlayerCharacter.cs" />
+    <None Include="Assets\UI Toolkit\NPCDialogue.uxml" />
     <None Include="Assets\UI Toolkit\GameUI.uxml" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
