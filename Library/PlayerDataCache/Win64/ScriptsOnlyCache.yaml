@@ -1,31 +1,33 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - DamageZone
     - EnemyController
+    - HealthCollectible
+    - PlayerController
+    - Projectile
+    - UIHandler
+    Cinemachine.dll:
+    - Cinemachine.CinemachineBrain
+    - Cinemachine.CinemachineConfiner2D
+    - Cinemachine.CinemachineFramingTransposer
+    - Cinemachine.CinemachinePipeline
+    - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.2D.Tilemap.Extras.Editor.dll:
-    - UnityEditor.Tilemaps.GameObjectBrush
-    - UnityEditor.Tilemaps.GroupBrush
-    - UnityEditor.Tilemaps.LineBrush
-    - UnityEditor.Tilemaps.RandomBrush
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -66,7 +68,6 @@ ScriptsOnlyBuild:
     Unity.RenderPipelines.Universal.Editor.dll:
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.RenderPipelines.Universal.Runtime.dll:
-    - UnityEngine.Rendering.Universal.Light2D
     - UnityEngine.Rendering.Universal.PostProcessData
     - UnityEngine.Rendering.Universal.Renderer2DData
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
@@ -74,7 +75,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
-    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -102,6 +102,15 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
+    Cinemachine:
+    - Cinemachine.CinemachineBlendDefinition
+    - Cinemachine.CinemachineBrain/BrainEvent
+    - Cinemachine.CinemachineBrain/VcamActivatedEvent
+    - Cinemachine.CinemachineVirtualCameraBase/TransitionParams
+    - Cinemachine.LensSettings
+    Unity.InputSystem:
+    - UnityEngine.InputSystem.InputAction
+    - UnityEngine.InputSystem.InputBinding
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIPrefabBundle
     Unity.RenderPipelines.Universal.Runtime:
@@ -129,6 +138,23 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
+    UnityEngine.UIElementsModule:
+    - UnityEngine.UIElements.DynamicAtlasSettings
+    - UnityEngine.UIElements.Label/UxmlFactory
+    - UnityEngine.UIElements.StyleComplexSelector
+    - UnityEngine.UIElements.StyleProperty
+    - UnityEngine.UIElements.StyleRule
+    - UnityEngine.UIElements.StyleSelector
+    - UnityEngine.UIElements.StyleSelectorPart
+    - UnityEngine.UIElements.StyleSheet/ImportStruct
+    - UnityEngine.UIElements.StyleSheets.Dimension
+    - UnityEngine.UIElements.StyleSheets.ScalableImage
+    - UnityEngine.UIElements.StyleValueHandle
+    - UnityEngine.UIElements.TemplateAsset
+    - UnityEngine.UIElements.UxmlRootElementFactory
+    - UnityEngine.UIElements.VisualElement/UxmlFactory
+    - UnityEngine.UIElements.VisualElementAsset
+    - UnityEngine.UIElements.VisualTreeAsset/UsingEntry
   methodsToPreserve:
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -173,7 +199,7 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/MainScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -186,10 +212,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 794}
+    - Class: 114
+      Script: {instanceID: 796}
+    - Class: 114
+      Script: {instanceID: 798}
+    - Class: 114
+      Script: {instanceID: 804}
+    - Class: 114
+      Script: {instanceID: 820}
+    - Class: 114
+      Script: {instanceID: 822}
     - Class: 114
       Script: {instanceID: 1754}
     - Class: 114
@@ -211,6 +265,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2600}
     - Class: 114
+      Script: {instanceID: 2846}
+    - Class: 114
       Script: {instanceID: 3004}
     - Class: 114
       Script: {instanceID: 3508}
@@ -218,6 +274,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3588}
     - Class: 114
       Script: {instanceID: 3746}
+    - Class: 114
+      Script: {instanceID: 3770}
     - Class: 114
       Script: {instanceID: 5198}
     - Class: 114
@@ -231,6 +289,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5560}
     - Class: 114
+      Script: {instanceID: 5974}
+    - Class: 114
       Script: {instanceID: 6092}
     - Class: 114
       Script: {instanceID: 6176}
@@ -243,13 +303,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6854}
     - Class: 114
+      Script: {instanceID: 7450}
+    - Class: 114
       Script: {instanceID: 7838}
+    - Class: 114
+      Script: {instanceID: 8682}
     - Class: 114
       Script: {instanceID: 8938}
     - Class: 114
       Script: {instanceID: 9090}
     - Class: 114
+      Script: {instanceID: 9134}
+    - Class: 114
+      Script: {instanceID: 9376}
+    - Class: 114
       Script: {instanceID: 9502}
+    - Class: 114
+      Script: {instanceID: 9808}
     - Class: 114
       Script: {instanceID: 9902}
     - Class: 114
@@ -263,13 +333,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11000}
     - Class: 114
-      Script: {instanceID: 11722}
+      Script: {instanceID: 11760}
     - Class: 114
       Script: {instanceID: 11796}
     - Class: 114
       Script: {instanceID: 12060}
     - Class: 114
       Script: {instanceID: 12346}
+    - Class: 114
+      Script: {instanceID: 12416}
     - Class: 114
       Script: {instanceID: 12698}
     - Class: 114
@@ -285,6 +357,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13628}
     - Class: 114
+      Script: {instanceID: 13682}
+    - Class: 114
       Script: {instanceID: 14496}
     - Class: 115
       Script: {instanceID: 0}
@@ -294,6 +368,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -301,6 +381,14 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -2327,5 +2415,6 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Utilizador/Documents/GitHub/Rubys adventure 2d/Builds/My project.exe
+  - Assets/Scenes/MainScene.unity
+  playerPath: C:/Users/Utilizador/Documents/GitHub/Rubys adventure 2d/Builds2/My
+    project.exe
